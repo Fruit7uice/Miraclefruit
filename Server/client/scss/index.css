@@ -12,6 +12,7 @@ body {
           align-items: center;
   background-color: rgba(29, 29, 29, 0.3);
   height: 12vh;
+  border-bottom: 3px solid #fc5c5c;
 }
 
 #navbarLogo {
@@ -42,31 +43,6 @@ body {
   background-size: cover;
 }
 
-/*.parallaxOne{
-    background-image: url(../images/Cp2077Arasaka.png);
-    background-position: center 15vh;
-    
-}
-.parallaxTwo{
-    background-image: url(../images/Cp2077KangTao.png);
-}
-
-
-
-.containerOne{
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-}
-*/
-.titleLine {
-  border: 2px solid #ffb8b8;
-  width: 100%;
-  -webkit-box-shadow: 0 0 7px #ff1f1f;
-          box-shadow: 0 0 7px #ff1f1f;
-  margin-top: -15px;
-}
-
 .parallaxOne {
   background: #612a2a;
   background: -webkit-gradient(linear, left top, left bottom, from(#612a2a), color-stop(70%, #050522));
@@ -76,8 +52,9 @@ body {
       -ms-flex-flow: column;
           flex-flow: column;
   color: #ff4444;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .path-container {
@@ -90,14 +67,14 @@ body {
           flex-flow: row;
 }
 
-.path-container p {
-  margin-top: -15px;
+.lifepath h3 {
+  margin-left: 10%;
 }
 
 .nomad-card, .streetkid-card, .corpo-card {
   background-color: #fff;
-  width: 40vh;
-  height: 65vh;
+  width: 39vh;
+  height: 60vh;
   position: relative;
   margin: 20px;
   border: 1px solid #ff4444;
