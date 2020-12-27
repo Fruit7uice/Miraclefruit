@@ -1,0 +1,141 @@
+@import "./functions";
+@import "./variables";
+
+body{
+    background-color: rgba(97,42,42,1);
+    color: #fff;
+}
+
+#navbarid{
+    display: flex;
+    align-items: center;
+    background-color: rgba(29, 29, 29, 0.3);
+    height: 12vh;
+}
+
+#navbarLogo{
+    width: 30vh;
+    height: 12vh;
+    background-image: url(../images/CyberpunkLogo.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.parallaxOne, .parallaxTwo{
+    @include flexProp(center, center);
+    /* -- Parallax Background Effect -- */
+    /* The image used */
+    @include parallaxProp();
+}
+
+/*.parallaxOne{
+    background-image: url(../images/Cp2077Arasaka.png);
+    background-position: center 15vh;
+    
+}
+.parallaxTwo{
+    background-image: url(../images/Cp2077KangTao.png);
+}
+
+
+
+.containerOne{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+*/
+.titleLine{
+    border: 2px solid #ffb8b8;
+    width: 100%;
+    box-shadow: 0 0 7px #ff1f1f;
+    margin-top: -15px;
+}
+.parallaxOne{
+    background: rgb(97,42,42);
+    background: linear-gradient(180deg, rgba(97,42,42,1) 0%, rgba(5,5,34,1) 70%);
+    flex-flow: column;
+    color: #ff4444;
+    justify-content: space-around;
+}
+
+.path-container{
+    display: flex;
+    flex-flow: row;
+
+    p{
+        margin-top: -15px;
+    }
+}
+
+.nomad-card, .streetkid-card, .corpo-card{
+    background-color: #fff;
+    width: 40vh;
+    height: 65vh;
+    position: relative;
+    margin: 20px;
+    border: 1px solid #ff4444;
+    --notchSize: 40px;
+  
+    clip-path: 
+      polygon(
+        0% 0px, 
+        0px 0%, 
+        calc(100% - 0px) 0%, 
+        100% 0px, 
+        100% calc(100% - var(--notchSize)), 
+        calc(100% - var(--notchSize)) 100%, 
+        0px 100%, 
+        0% calc(100% - 0px)
+      );
+}
+
+.nomad-card{
+    background-image: url(../images/nomadLifepath2Remake.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+    
+}
+.nomad-card:hover, .streetkid-card:hover, .corpo-card:hover{
+    transform: scale(1.05, 1.05);
+     
+}
+.streetkid-card{
+    background-image: url(../images/street-kidLifepathRemake.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+    
+}
+
+.corpo-card{
+    background-image: url(../images/corpoLifepath.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+    
+}
+
+#cardbodyId1, #cardbodyId2{
+    background-color: #000;   
+}
+
+#cardbodyId1{
+    border: 5px solid #d32d37;
+}
+
+#cardbodyId2{
+    border: 5px solid #afe3ca;
+}
+
+.parallaxTwo{
+    background-image: url(../images/Cp2077-Nomad2.jpg);
+    flex-flow: column;
+    color: #ff4444;
+    justify-content: space-around;
+    
+}

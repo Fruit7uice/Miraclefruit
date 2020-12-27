@@ -1,0 +1,40 @@
+@import "./variables";
+
+
+
+
+@mixin parallaxProp(){
+
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+@mixin flexProp($orientation, $orientation2){
+    display: flex;
+    justify-content: $orientation;
+    align-items: $orientation2;
+}
+
+@mixin singleImgProp($image, $repeat){
+    background-image: $image;
+    background-position: center;
+    background-size: cover;
+    background-repeat: $repeat;
+}
+
+@mixin customFont($path, $fontName){
+    @font-face{
+        font-family: $fontName;
+        src: url($path);
+    }
+}
+
+@mixin textProp($size, $color, $weight, $pos){
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+    text-align: $pos ;
+}
